@@ -16,6 +16,9 @@ app.use(express.json());
 const user = require("./routes/route");
 app.use("/api",user);
 
+app.get('/', (req, res) => {
+  res.send('Backend Working Successfully');
+});
 
 //Server created
 const PORT = process.env.PORT || 5000;
