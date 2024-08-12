@@ -73,16 +73,16 @@ exports.login = async (req ,res)=>{
             let token = jwt.sign(payload,process.env.JWT_SECRET,{expiresIn:"2h"}
             );
 
-            user = user.toObject();
-            user.token = token;
-            user.password = undefined;
+            // user = user.toObject();
+            // user.token = token;
+            // user.password = undefined;
 
-            res.cookie('token', token, {
-                httpOnly: true,
-                //secure: false // Use HTTPS in production
-                maxAge: 1000 * 60 * 60, // 1 hour
-                sameSite: 'Lax'
-              });
+            // res.cookie('token', token, {
+            //     httpOnly: true,
+            //     //secure: false // Use HTTPS in production
+            //     maxAge: 1000 * 60 * 60, // 1 hour
+            //     sameSite: 'Lax'
+            //   });
 
            
 

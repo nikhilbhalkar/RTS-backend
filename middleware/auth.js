@@ -7,7 +7,7 @@ exports.auth = (req, res, next) => {
       console.log(req.body);
       
     
-     const token = req.cookies.token;
+      const token = req.header('Authorization').replace('Bearer ', '');
       console.log("token is === ", token);
 
       //token is not avilable
